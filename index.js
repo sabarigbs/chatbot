@@ -12,7 +12,7 @@ server.use(bodyParser.urlencoded({
 server.post('/',function(req,res,next){
 
     var dataToSend = req.body.message;
-    console.log(dataToSend);
+    console.log("This is test from server "+dataToSend);
 
     return res.json({
         speech : dataToSend,
