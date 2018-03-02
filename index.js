@@ -11,7 +11,7 @@ server.use(bodyParser.urlencoded({
 
 server.post('/',function(req,res,next){
 
-    var dataToSend = req.body.message;
+    var dataToSend = req.body.parameters;
     console.log("This is test from server "+dataToSend);
 
     return res.json({
