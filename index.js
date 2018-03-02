@@ -10,8 +10,8 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.post('/',function(req,res,next){
-    console.log(req.body.queryResult.queryText);
-    var dataToSend = req.body.queryResult.queryText;
+    console.log(req.body);
+    var dataToSend = req.body;
     console.log("This is test from server "+dataToSend);
     res.setHeader('Content-Type', 'application/json');
     res.json({
