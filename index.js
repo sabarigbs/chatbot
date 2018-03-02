@@ -13,8 +13,8 @@ server.post('/',function(req,res,next){
     console.log(req.body.queryResult.queryText);
     var dataToSend = req.body.queryResult.queryText;
     console.log("This is test from server "+dataToSend);
-
-    return res.json({
+    res.writeHead(200, { 'Content-Type': 'text/plain' })
+    res.json({
         speech : dataToSend,
         displayText : dataToSend,
         source : '/'
