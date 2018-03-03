@@ -10,8 +10,8 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.post('/',function(req,res,next){
-
-    var dataToSend = req.body.parameters;
+    console.log(req.body);
+    var dataToSend = req.body.result.paramaters.name;
     console.log("This is test from server "+dataToSend);
 
     return res.json({
