@@ -14,7 +14,7 @@ server.post('/',function(req,res,next){
     var dataToSend = req.body.result;
     console.log("This is test from server "+dataToSend);
     res.setHeader('Content-Type', 'application/json');
-    res.json({
+    return res.json({
         textToSpeech : dataToSend,
         displayText : dataToSend,
         source : '/'
